@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `boisson 1(ingredient)` (
   `nom_boisson` text,
   `MyUnknownColumn` text,
   `marque` text
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `boisson 1(ingredient)`
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `focaccia – copie(ingredient)` (
   `nom_focaccia` text,
   `prix` double DEFAULT NULL,
   `ingrédients` text
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `focaccia – copie(ingredient)`
@@ -149,7 +149,7 @@ DROP TABLE IF EXISTS `ingredient(ingredient)`;
 CREATE TABLE IF NOT EXISTS `ingredient(ingredient)` (
   `id_ingredient` int DEFAULT NULL,
   `nom_ingredient` text
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 --
 -- Déchargement des données de la table `ingredient(ingredient)`
