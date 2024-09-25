@@ -35,7 +35,7 @@ CREATE TABLE IF NOT EXISTS `boisson` (
   `idboisson` int NOT NULL,
   `nomBoisson` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idboisson`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 -- --------------------------------------------------------
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `boisson 1(ingredient)` (
   `nom_boisson` text,
   `MyUnknownColumn` text,
   `marque` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 --
 -- Déchargement des données de la table `boisson 1(ingredient)`
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `age` int DEFAULT NULL,
   `cpClient` int DEFAULT NULL,
   PRIMARY KEY (`idClient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 -- --------------------------------------------------------
 
@@ -96,7 +96,7 @@ CREATE TABLE IF NOT EXISTS `focaccia` (
   `nomFocaccia` varchar(45) DEFAULT NULL,
   `prixFocaccia` float DEFAULT NULL,
   PRIMARY KEY (`idfocaccia`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 -- --------------------------------------------------------
 
@@ -110,7 +110,7 @@ CREATE TABLE IF NOT EXISTS `focaccia – copie(ingredient)` (
   `nom_focaccia` text,
   `prix` double DEFAULT NULL,
   `ingrédients` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 --
 -- Déchargement des données de la table `focaccia – copie(ingredient)`
@@ -137,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `ingredient` (
   `idIngredient` int NOT NULL,
   `nomIngredient` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idIngredient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 -- --------------------------------------------------------
 
@@ -149,7 +149,7 @@ DROP TABLE IF EXISTS `ingredient(ingredient)`;
 CREATE TABLE IF NOT EXISTS `ingredient(ingredient)` (
   `id_ingredient` int DEFAULT NULL,
   `nom_ingredient` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 --
 -- Déchargement des données de la table `ingredient(ingredient)`
@@ -192,7 +192,7 @@ CREATE TABLE IF NOT EXISTS `marque` (
   `idmarque` int NOT NULL,
   `nomMarque` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idmarque`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 -- --------------------------------------------------------
 
@@ -204,7 +204,7 @@ DROP TABLE IF EXISTS `marque(ingredient)`;
 CREATE TABLE IF NOT EXISTS `marque(ingredient)` (
   `id_marque` int DEFAULT NULL,
   `nom_marque` text
-) ENGINE=MyISAM DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 --
 -- Déchargement des données de la table `marque(ingredient)`
@@ -228,7 +228,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `nomMenu` varchar(45) DEFAULT NULL,
   `prixMenu` float DEFAULT NULL,
   PRIMARY KEY (`idmenu`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
 
 --
 -- Contraintes pour les tables déchargées

@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `boisson_1_ingredient_` (
   `COL 2` varchar(25) DEFAULT NULL,
   `COL 3` varchar(10) DEFAULT NULL,
   `COL 4` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_0900_general_ci;
 
 --
 -- Déchargement des données de la table `boisson_1_ingredient_`
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `focaccia_____copie_ingredient_` (
   `COL 2` varchar(15) DEFAULT NULL,
   `COL 3` varchar(4) DEFAULT NULL,
   `COL 4` varchar(114) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_0900_general_ci;
 
 --
 -- Déchargement des données de la table `focaccia_____copie_ingredient_`
@@ -102,7 +102,7 @@ CREATE TABLE IF NOT EXISTS `ingredient_ingredient_` (
   `COL 1` varchar(13) DEFAULT NULL,
   `COL 2` varchar(14) DEFAULT NULL,
   `COL 3` varchar(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_0900_general_ci;
 
 --
 -- Déchargement des données de la table `ingredient_ingredient_`
@@ -147,7 +147,7 @@ DROP TABLE IF EXISTS `marque_ingredient_`;
 CREATE TABLE IF NOT EXISTS `marque_ingredient_` (
   `COL 1` varchar(9) DEFAULT NULL,
   `COL 2` varchar(11) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_0900_general_ci;
 
 --
 -- Déchargement des données de la table `marque_ingredient_`
