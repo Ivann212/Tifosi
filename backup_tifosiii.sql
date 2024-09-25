@@ -22,9 +22,13 @@ SET time_zone = "+00:00";
 --
 
 DROP DATABASE IF EXISTS tifosiiii;
-CREATE DATABASE IF NOT EXISTS tifosiiii
+CREATE DATABASE IF NOT EXISTS tifosiiii;
 
 -- --------------------------------------------------------
+
+
+
+USE tifosiiii;
 
 --
 -- Structure de la table `boisson`
@@ -35,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `boisson` (
   `idboisson` int NOT NULL,
   `nomBoisson` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idboisson`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -49,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `boisson 1(ingredient)` (
   `nom_boisson` text,
   `MyUnknownColumn` text,
   `marque` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `boisson 1(ingredient)`
@@ -82,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `client` (
   `age` int DEFAULT NULL,
   `cpClient` int DEFAULT NULL,
   PRIMARY KEY (`idClient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -96,7 +100,7 @@ CREATE TABLE IF NOT EXISTS `focaccia` (
   `nomFocaccia` varchar(45) DEFAULT NULL,
   `prixFocaccia` float DEFAULT NULL,
   PRIMARY KEY (`idfocaccia`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -110,7 +114,7 @@ CREATE TABLE IF NOT EXISTS `focaccia – copie(ingredient)` (
   `nom_focaccia` text,
   `prix` double DEFAULT NULL,
   `ingrédients` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `focaccia – copie(ingredient)`
@@ -137,7 +141,7 @@ CREATE TABLE IF NOT EXISTS `ingredient` (
   `idIngredient` int NOT NULL,
   `nomIngredient` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idIngredient`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -149,7 +153,7 @@ DROP TABLE IF EXISTS `ingredient(ingredient)`;
 CREATE TABLE IF NOT EXISTS `ingredient(ingredient)` (
   `id_ingredient` int DEFAULT NULL,
   `nom_ingredient` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `ingredient(ingredient)`
@@ -192,7 +196,7 @@ CREATE TABLE IF NOT EXISTS `marque` (
   `idmarque` int NOT NULL,
   `nomMarque` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idmarque`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -204,7 +208,7 @@ DROP TABLE IF EXISTS `marque(ingredient)`;
 CREATE TABLE IF NOT EXISTS `marque(ingredient)` (
   `id_marque` int DEFAULT NULL,
   `nom_marque` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `marque(ingredient)`
@@ -228,7 +232,7 @@ CREATE TABLE IF NOT EXISTS `menu` (
   `nomMenu` varchar(45) DEFAULT NULL,
   `prixMenu` float DEFAULT NULL,
   PRIMARY KEY (`idmenu`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Contraintes pour les tables déchargées
@@ -269,5 +273,6 @@ COMMIT;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 
+GRANT SELECT, INSERT, UPDATE, DELETE, CREATE, DROP, RELOAD, SHUTDOWN, PROCESS, FILE, REFERENCES, INDEX, ALTER, SHOW DATABASES, SUPER, CREATE TEMPORARY TABLES, LOCK TABLES, EXECUTE, REPLICATION SLAVE, REPLICATION CLIENT, CREATE VIEW, SHOW VIEW, CREATE ROUTINE, ALTER ROUTINE, CREATE USER, EVENT, TRIGGER, CREATE TABLESPACE, CREATE ROLE, DROP ROLE ON *.* TO `tifosi`@`%` WITH GRANT OPTION;
 
-CREATE USER 'tifosi'@'%' IDENTIFIED WITH caching_sha2_password BY '***';GRANT ALL PRIVILEGES ON *.* TO 'tifosi'@'%' WITH GRANT OPTION;ALTER USER 'tifosi'@'%' REQUIRE NONE WITH MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR 0 MAX_USER_CONNECTIONS 0;
+GRANT ALLOW_NONEXISTENT_DEFINER,APPLICATION_PASSWORD_ADMIN,AUDIT_ABORT_EXEMPT,AUDIT_ADMIN,AUTHENTICATION_POLICY_ADMIN,BACKUP_ADMIN,BINLOG_ADMIN,BINLOG_ENCRYPTION_ADMIN,CLONE_ADMIN,CONNECTION_ADMIN,ENCRYPTION_KEY_ADMIN,FIREWALL_EXEMPT,FLUSH_OPTIMIZER_COSTS,FLUSH_STATUS,FLUSH_TABLES,FLUSH_USER_RESOURCES,GROUP_REPLICATION_ADMIN,GROUP_REPLICATION_STREAM,INNODB_REDO_LOG_ARCHIVE,INNODB_REDO_LOG_ENABLE,PASSWORDLESS_USER_ADMIN,PERSIST_RO_VARIABLES_ADMIN,REPLICATION_APPLIER,REPLICATION_SLAVE_ADMIN,RESOURCE_GROUP_ADMIN,RESOURCE_GROUP_USER,ROLE_ADMIN,SENSITIVE_VARIABLES_OBSERVER,SERVICE_CONNECTION_ADMIN,SESSION_VARIABLES_ADMIN,SET_ANY_DEFINER,SHOW_ROUTINE,SYSTEM_USER,SYSTEM_VARIABLES_ADMIN,TABLE_ENCRYPTION_ADMIN,TELEMETRY_LOG_ADMIN,XA_RECOVER_ADMIN ON *.* TO `tifosi`@`%` WITH GRANT OPTION;
